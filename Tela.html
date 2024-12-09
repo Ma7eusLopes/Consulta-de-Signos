@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brabo dos Signos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid main-container d-flex align-items-center justify-content-center" style="min-height: 100vh; background-color: #FFFFFF;">
+        <div class="content-wrapper text-center p-5" style="background-color: #9C27B0; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); max-width: 400px;">
+            <!-- Aviso sobre o XAMPP -->
+            <div class="alert alert-info text-start mb-4" role="alert" style="font-size: 0.9rem;">
+                <strong>Recado:</strong> Para acessar este site, você precisa instalar o <a href="https://www.apachefriends.org/pt_br/index.html" target="_blank" style="text-decoration: underline; color: #0056b3;">XAMPP</a> no seu computador. O XAMPP é um ambiente de desenvolvimento PHP que permite executar projetos localmente.
+            </div>
+
+            <h1 class="title mb-3" style="color: #FFEB3B; font-family: 'Poppins', sans-serif;">Brabo dos Signos</h1>
+            <p class="subtitle text-white mb-4" style="font-family: 'Montserrat', sans-serif;">O que seu signo diz sobre seu futuro?</p>
+
+            <form id="signo-form" method="POST" action="show_zodiac_sign.php">
+                <div class="form-group">
+                    <label for="data_nascimento" class="form-label" style="color: #FFEB3B;">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" style="border-radius: 5px; border: 1px solid #FFEB3B;" required>
+                </div>
+                <button type="submit" class="btn mt-4 w-100" style="background-color: #FFEB3B; color: #-; border-radius: 5px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);">Enviar</button>
+            </form>
+
+            <footer class="footer mt-5">
+                <p class="text-muted" style="font-size: 0.9rem; color: #FFEB3B;">Desenvolvido por: Mateus Lopes</p>
+            </footer>
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .content-wrapper:hover {
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Efeito hover no botão */
+        .btn:hover {
+            background-color: #9C27B0;
+            color: #FFFFFF;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Estilo para o título */
+        .title {
+            color: #FFEB3B;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Estilo para o subtítulo */
+        .subtitle {
+            color: #FFFFFF;
+            font-size: 1rem;
+        }
+
+        /* Estilo para o formulário */
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control:focus {
+            border-color: #FFEB3B;
+            box-shadow: 0 0 5px rgba(0, 101, 255, 0.5);
+        }
+    </style>
+</body>
+</html>
